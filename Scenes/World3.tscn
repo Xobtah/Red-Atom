@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/World.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Industrial TileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://Prefabs/Red Atom.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Fires.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/Fire.tscn" type="PackedScene" id=5]
+
+[node name="World" type="Node2D"]
+
+script = ExtResource( 1 )
+nextScene = "res://Scenes/World4.tscn"
+marginLeft = 0
+marginRight = 2700
+marginTop = -1000000
+marginBottom = 600
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+scale = Vector2( 0.5, 0.5 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 144, 144 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 3, 0, 14, 3, 0, 65536, 3, 0, 65550, 3, 0, 131072, 3, 0, 131086, 3, 0, 196608, 3, 0, 196615, 1, 0, 196622, 3, 0, 262144, 3, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262158, 3, 0, 327680, 3, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327689, 1, 0, 327694, 3, 0, 393216, 3, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393223, 1, 0, 393224, 1, 0, 393225, 1, 0, 393226, 1, 0, 393230, 3, 0, 458752, 3, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458766, 3, 0, 524288, 2, 0, 524289, 2, 0, 524290, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 2, 0, 524294, 2, 0, 524295, 2, 0, 524296, 2, 0, 524297, 2, 0, 524298, 2, 0, 524299, 2, 0, 524300, 2, 0, 524301, 2, 0, 524302, 2, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Red Atom" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 540, 190 )
+
+[node name="Fires" type="Node2D" parent="." index="2"]
+
+script = ExtResource( 4 )
+
+[node name="Fire" parent="Fires" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( 969, 571 )
+
+[node name="Fire2" parent="Fires" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 109, 572 )
+
+

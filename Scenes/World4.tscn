@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/World.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Industrial TileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://Prefabs/Red Atom.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Fires.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/Fire.tscn" type="PackedScene" id=5]
+
+[node name="World" type="Node2D"]
+
+script = ExtResource( 1 )
+nextScene = "res://Scenes/Menu.tscn"
+marginLeft = 0
+marginRight = 1000000
+marginTop = -1000000
+marginBottom = 1180
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+scale = Vector2( 0.5, 0.5 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 144, 144 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 3, 0, 14, 3, 0, 65536, 3, 0, 65550, 3, 0, 131072, 3, 0, 131086, 3, 0, 196608, 3, 0, 196622, 3, 0, 262144, 3, 0, 262154, 5, 0, 262156, 5, 0, 262158, 3, 0, 327680, 3, 0, 327689, 5, 0, 327694, 3, 0, 393216, 3, 0, 393224, 5, 0, 393230, 3, 0, 458752, 3, 0, 458756, 5, 0, 458766, 3, 0, 524288, 3, 0, 524294, 5, 0, 524302, 3, 0, 589824, 3, 0, 589834, 5, 0, 589838, 3, 0, 655360, 3, 0, 655366, 5, 0, 655374, 3, 0, 720896, 3, 0, 720898, 5, 0, 720903, 5, 0, 720908, 5, 0, 720910, 3, 0, 786432, 3, 0, 786437, 5, 0, 786442, 5, 0, 786446, 3, 0, 851968, 3, 0, 851969, 5, 0, 851976, 5, 0, 851982, 3, 0, 917504, 3, 0, 917509, 5, 0, 917518, 3, 0, 983040, 3, 0, 983043, 5, 0, 983047, 5, 0, 983054, 3, 0, 1048576, 2, 0, 1048577, 2, 0, 1048578, 2, 0, 1048579, 2, 0, 1048580, 2, 0, 1048581, 2, 0, 1048582, 2, 0, 1048583, 2, 0, 1048584, 2, 0, 1048585, 2, 0, 1048586, 2, 0, 1048587, 2, 0, 1048588, 2, 0, 1048589, 2, 0, 1048590, 2, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Red Atom" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 117, 1127 )
+
+[node name="Fires" type="Node2D" parent="." index="2"]
+
+script = ExtResource( 4 )
+
+[node name="Fire" parent="Fires" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( 960, 286 )
+
+

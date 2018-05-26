@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Liquidator Red.png-ee9618cb1fb9e75b7eeb494cfcac81ba.stex"
+
+[deps]
+
+source_file="res://Assets/Images/Liquidator Red.png"
+source_md5="f3d413ce2ced063ed8598b1c5f8c87fb"
+
+dest_files=[ "res://.import/Liquidator Red.png-ee9618cb1fb9e75b7eeb494cfcac81ba.stex" ]
+dest_md5="938f4d63171347242426bb56d290afbf"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

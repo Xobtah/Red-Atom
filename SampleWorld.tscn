@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/World.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Fires.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/Red Atom.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Industrial TileSet.tres" type="TileSet" id=4]
+
+[node name="World" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+nextScene = null
+marginLeft = -1000000
+marginRight = 1000000
+marginTop = -1000000
+marginBottom = 1000000
+
+[node name="Fires" type="Node2D" parent="." index="0"]
+
+script = ExtResource( 2 )
+
+[node name="Red Atom" parent="." index="1" instance=ExtResource( 3 )]
+
+[node name="TileMap" type="TileMap" parent="." index="2"]
+
+scale = Vector2( 0.5, 0.5 )
+mode = 0
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 144, 144 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray(  )
+_sections_unfolded = [ "Cell", "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+

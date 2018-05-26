@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Industrial TileSet.png-4c2ee171c9c949ae98e2639383cd7fca.stex"
+
+[deps]
+
+source_file="res://Assets/Images/Industrial TileSet.png"
+source_md5="1133995fa793b7db201699e045df9fab"
+
+dest_files=[ "res://.import/Industrial TileSet.png-4c2ee171c9c949ae98e2639383cd7fca.stex" ]
+dest_md5="9cc3c6c82d2e5b25f52a501ad89d6d2a"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
